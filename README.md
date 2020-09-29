@@ -35,10 +35,16 @@ ln -s rootfs/opt/vc/lib/libEGL.so rootfs/usr/lib/arm-linux-gnueabihf/libEGL.so.1
 mv rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0 rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0_backup
 ln -s rootfs/opt/vc/lib/libGLESv2.so rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0
 
-ln -s sysroot/opt/vc/lib/libEGL.so sysroot/opt/vc/lib/libEGL.so.1
-ln -s sysroot/opt/vc/lib/libGLESv2.so sysroot/opt/vc/lib/libGLESv2.so.2
+ln -s rootfs/opt/vc/lib/libEGL.so rootfs/opt/vc/lib/libEGL.so.1
+ln -s rootfs/opt/vc/lib/libGLESv2.so rootfs/opt/vc/lib/libGLESv2.so.2
 
 wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-relativelinks.py
 chmod +x sysroot-relativelinks.py
-sysroot-relativelinks.py sysroot
+sysroot-relativelinks.py rootfs
 ```
+
+```
+// client
+ssh-keygen -t rsa 
+cat ~/.ssh/id_rsa.pub | ssh -o StrictHostKeyChecking=no pi@192.168.3.5 "mkdir -p .ssh && chmod 700 .ssh && cat >> .ssh/authorized_keys"
+
