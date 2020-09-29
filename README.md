@@ -21,6 +21,12 @@ hdmi_drive=1
 ```
 
 ```
+sudo sed -i "s/raspbian.raspberrypi.org/mirrors.bfsu.edu.cn\/raspbian/g" /etc/apt/sources.list
+sudo sed -i "s/archive.raspberrypi.org\/debian/mirrors.bfsu.edu.cn\/raspberrypi/g" /etc/apt/sources.list.d/raspi.list
+
+```
+
+```
 rsync -avz pi@192.168.3.5:/lib rootfs
 rsync -avz pi@192.168.3.5:/usr/include rootfs/usr
 rsync -avz pi@192.168.3.5:/usr/lib rootfs/usr
