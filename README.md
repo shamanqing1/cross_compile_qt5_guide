@@ -27,3 +27,18 @@ rsync -avz pi@192.168.3.5:/usr/lib rootfs/usr
 rsync -avz pi@192.168.3.5:/opt/vc rootfs/opt
 
 ```
+
+```
+mv rootfs/usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0 rootfs/usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0_backup
+ln -s rootfs/opt/vc/lib/libEGL.so rootfs/usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0
+
+mv rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0 rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0_backup
+ln -s rootfs/opt/vc/lib/libGLESv2.so rootfs/usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0
+
+ln -s sysroot/opt/vc/lib/libEGL.so sysroot/opt/vc/lib/libEGL.so.1
+ln -s sysroot/opt/vc/lib/libGLESv2.so sysroot/opt/vc/lib/libGLESv2.so.2
+
+wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-relativelinks.py
+chmod +x sysroot-relativelinks.py
+sysroot-relativelinks.py sysroot
+```
