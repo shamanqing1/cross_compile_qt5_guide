@@ -19,3 +19,11 @@ hdmi_mode=87
 hdmi_timings= 1024 0 168 32 120 600 0 15 6 14 0 0 0 60 0 51200000 3
 hdmi_drive=1
 ```
+
+```
+rsync -avz pi@192.168.3.5:/lib rootfs
+rsync -avz pi@192.168.3.5:/usr/include rootfs/usr
+rsync -avz pi@192.168.3.5:/usr/lib rootfs/usr
+rsync -avz pi@192.168.3.5:/opt/vc rootfs/opt
+
+```
