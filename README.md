@@ -13,7 +13,11 @@ apt install libasound2-dev libspeechd-dev speech-dispatcher libjpeg-dev libpng-d
 ```
 sudo apt install flite1-dev libspeechd-dev speech-dispatcher libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libdrm-dev flex ruby gperf bison libts-dev libdbus-1-dev libudev-dev libicu-dev libsqlite3-dev libxslt1-dev libssl-dev libnss3-dev libasound2-dev libavcodec-dev libavformat-dev libswscale-dev libpulse-dev libcpuset-dev freetds-dev libsqlite0-dev libpq-dev libiodbc2-dev libmysqlclient-dev firebird-dev libpng-dev libjpeg-dev libxdamage-dev libxrender-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-xfixes0-dev libxcb-sync-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-image0-dev libxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-dev libfreetype-dev libfreetype6-dev libxi-dev libxext-dev libx11-dev libx11-xcb-dev libxcb1-dev libsm-dev libice-dev libglib2.0-dev libgst-dev libxcb-sync0-dev libfontconfig1-dev libxfixes-dev libxcb-glx0-dev 
 
-sudo apt-get install libopenal1 libopenal-dev libbluetooth-dev libkrb5-dev libassimp-dev libsdl2-dev  libinput-dev libxcb-xinerama0-dev libxcb-xinerama0 libatspi2.0-dev libxcomposite-dev libxcursor-dev libxcb-cursor-dev libclippoly-dev libclipper-dev libwayland-dev libwayland-egl-backend-dev waylandpp-dev libwayland-egl1-mesa libwayland-egl++0 libvulkan-dev mesa-vulkan-drivers libgegl-dev libgbm-dev libegl1-mesa libegl1 libgles2 libgles2-mesa libegl1-mesa-dev libgles2-mesa-dev libglvnd-dev libgles1 mesa-common-dev
+sudo apt-get install libopenal1 libopenal-dev libbluetooth-dev libkrb5-dev libassimp-dev libsdl2-dev  libinput-dev libxcb-xinerama0-dev libxcb-xinerama0 libatspi2.0-dev libxcomposite-dev libxcursor-dev libxcb-cursor-dev libclippoly-dev 
+
+sudo apt-get install libsctp-dev libmd4c-dev libxcb-xinput-dev libwayland-dev libre2-dev libopus-dev libvpx-dev libsnappy-dev libminizip-dev libevent-dev libjsoncpp-dev libprotobuf-dev liblcms2-dev
+
+sudo apt-get install libclipper-dev libwayland-dev libwayland-egl-backend-dev waylandpp-dev libwayland-egl1-mesa libwayland-egl++0 libvulkan-dev mesa-vulkan-drivers libgegl-dev libgbm-dev libegl1-mesa libegl1 libgles2 libgles2-mesa libegl1-mesa-dev libgles2-mesa-dev libglvnd-dev libgles1 mesa-common-dev
 
 ```
 
